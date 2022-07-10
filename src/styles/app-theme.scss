@@ -1,4 +1,47 @@
 @import 'mixins';
 
 $font-color: black;
-$theme-color: red;
+
+$theme-color: hsl(180, 50%, 50%);
+$theme-hue: 180;
+$theme-saturation: 50%;
+
+$alt-color: hsl(250, 50%, 50%);
+$alt-hue: 250;
+$alt-saturation: 60%;
+
+$theme: (
+  50: hsl($theme-hue, $theme-saturation, 95%),
+  100: hsl($theme-hue, $theme-saturation, 85%),
+  200: hsl($theme-hue, $theme-saturation, 75%),
+  300: hsl($theme-hue, $theme-saturation, 65%),
+  400: hsl($theme-hue, $theme-saturation, 55%),
+  500: hsl($theme-hue, $theme-saturation, 50%),
+  600: hsl($theme-hue, $theme-saturation, 45%),
+  700: hsl($theme-hue, $theme-saturation, 40%),
+  800: hsl($theme-hue, $theme-saturation, 35%),
+  900: hsl($theme-hue, $theme-saturation, 30%),
+);
+
+$alt: (
+  50: hsl($alt-hue, $alt-saturation, 95%),
+  100: hsl($alt-hue, $alt-saturation, 85%),
+  200: hsl($alt-hue, $alt-saturation, 75%),
+  300: hsl($alt-hue, $alt-saturation, 65%),
+  400: hsl($alt-hue, $alt-saturation, 55%),
+  500: hsl($alt-hue, $alt-saturation, 50%),
+  600: hsl($alt-hue, $alt-saturation, 45%),
+  700: hsl($alt-hue, $alt-saturation, 40%),
+  800: hsl($alt-hue, $alt-saturation, 35%),
+  900: hsl($alt-hue, $alt-saturation, 30%),
+);
+
+$common-light: (
+  background: hsl($theme-hue, 100%, 92%),
+  foreground: hsl($theme-hue, 100%, 8%),
+);
+
+$common-dark: (
+  background: hsl($theme-hue, 100%, 8%),
+  foreground: hsl($theme-hue, 100%, 92%),
+);
