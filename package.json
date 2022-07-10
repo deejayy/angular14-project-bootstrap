@@ -19,7 +19,7 @@
       "eslint",
       "jest --findRelatedTests"
     ],
-    "*.scss": "stylelint --syntax=scss --config=./stylelint"
+    "*.scss": "stylelint --config=./stylelint.json --custom-syntax=postcss-scss"
   },
   "dependencies": {
     "@angular/animations": "^14.0.0",
