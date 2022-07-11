@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '@angular/material' as mat;
 
 @import '../../node_modules/modern-css-reset/dist/reset';
@@ -60,32 +61,46 @@ $project-primary: mat.define-palette($primary-palette);
 $project-accent: mat.define-palette($accent-palette, 300, 100, 400);
 $project-warn: mat.define-palette(mat.$red-palette);
 
+$project-theme-dark: mat.define-dark-theme(
+  (
+    color: (
+      primary: $project-primary,
+      accent: $project-accent,
+      warn: $project-warn,
+    ),
+  )
+);
+
+$project-theme-light: mat.define-light-theme(
+  (
+    color: (
+      primary: $project-primary,
+      accent: $project-accent,
+      warn: $project-warn,
+    ),
+  )
+);
+
+$material-theme-overrides: (
+  color: (
+    foreground: $foreground-light,
+    background: $background-light,
+  ),
+);
+
+$project-theme: map.deep-merge($project-theme-light, $material-theme-overrides);
+@include mat.all-component-themes($project-theme);
+
 @media (prefers-color-scheme: dark) {
-  $project-theme: mat.define-dark-theme(
-    (
-      color: (
-        primary: $project-primary,
-        accent: $project-accent,
-        warn: $project-warn,
-      ),
-    )
+  $material-theme-overrides: (
+    color: (
+      foreground: $foreground-dark,
+      background: $background-dark,
+    ),
   );
 
-  @include mat.all-component-themes($project-theme);
-}
-
-@media (prefers-color-scheme: light) {
-  $project-theme: mat.define-light-theme(
-    (
-      color: (
-        primary: $project-primary,
-        accent: $project-accent,
-        warn: $project-warn,
-      ),
-    )
-  );
-
-  @include mat.all-component-themes($project-theme);
+  $project-theme: map.deep-merge($project-theme-dark, $material-theme-overrides);
+  @include mat.all-component-colors($project-theme);
 }
 
 html,
