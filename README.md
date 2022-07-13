@@ -23,6 +23,7 @@ To be done:
 - config
 - localizer runtime autoload
 - feature flag
+- demo page
 
 ## How to leverage prepared setups
 
