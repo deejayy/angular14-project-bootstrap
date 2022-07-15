@@ -20,7 +20,6 @@ LIst of features:
 To be done:
 
 - api caller
-- config
 - localizer runtime autoload
 - feature flag
 - demo page
@@ -45,6 +44,7 @@ Check: https://www.npmjs.com/package/@deejayy/reactive-config
 
 Config file: /assets/config-{dev,prod}.json
 
-*Protip*: if you want to hide your dev/staging/qa configs, generate a hash in the config's file name (security through obscurity), like this: `config-dev-ad7f82.json`. Since at build time it will only include the environment file which is required for that build env, your prod bundle won't contain the dev configs name, and also can't be guessed because of the hash.
+*Protip*: if you want to hide your dev/staging/qa configs, generate a hash in the config's file name (security through obscurity), like this: `config-dev-ad7f82.json`. Since at build time it will only include the environment file which is required for that build env, your prod bundle won't contain the dev configs name, and also can't be guessed because of the hash.  
+Or, of course, you can adjust `fileReplacements` section in angular.json for similar effect.
 
 ### TBD
