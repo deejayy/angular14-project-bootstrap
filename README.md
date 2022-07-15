@@ -39,4 +39,10 @@ To be done:
 - SCSS IntelliSense
 - Stylelint
 
+### Reactive Config
+
+Check: https://www.npmjs.com/package/@deejayy/reactive-config
+
+Config file: /assets/config-{dev,prod}.json
+
 ### TBD
