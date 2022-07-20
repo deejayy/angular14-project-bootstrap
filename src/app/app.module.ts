@@ -1,4 +1,4 @@
-import { LOCALE_ID, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveConfigModule } from '@deejayy/reactive-config';
@@ -32,7 +32,6 @@ import { AppComponent } from './app.component';
       logOnly: environment.production,
     }),
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'en-US' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
