@@ -34,6 +34,7 @@
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
     "@auth0/angular-jwt": "^5.0.2",
+    "@deejayy/api-caller": "^14.1.0",
     "@deejayy/reactive-config": "^14.0.3",
     "@deejayy/runtime-localizer": "^14.0.3",
     "@ngrx/effects": "^14.0.2",

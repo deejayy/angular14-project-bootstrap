@@ -10,6 +10,8 @@ import { ConfigVars } from 'src/app/shared/model/config-vars.model';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RuntimeLocalizerModule } from '@deejayy/runtime-localizer';
+import { ApiCallerModule, ApiConnector } from '@deejayy/api-caller';
+import { ApiConnectorService } from 'src/app/shared/service/api-connector.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +19,7 @@ import { RuntimeLocalizerModule } from '@deejayy/runtime-localizer';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    ApiCallerModule,
     ReactiveConfigModule.forRoot(ConfigVars, { configPath: environment.config }),
     RuntimeLocalizerModule.forRoot([
       {
@@ -43,6 +46,7 @@ import { RuntimeLocalizerModule } from '@deejayy/runtime-localizer';
       logOnly: environment.production,
     }),
   ],
+  providers: [{ provide: ApiConnector, useClass: ApiConnectorService }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
