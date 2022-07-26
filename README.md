@@ -18,7 +18,6 @@ LIst of features:
 
 To be done:
 
-- api caller
 - feature flag
 - demo page
 
@@ -49,4 +48,12 @@ Or, of course, you can adjust `fileReplacements` section in angular.json for sim
 
 Check: https://www.npmjs.com/package/@deejayy/runtime-localizer
 
+### API Caller
+
+Check: https://www.npmjs.com/package/@deejayy/api-caller
+
 ### TBD
+
+There will be some simple feature modules just to test library functionalities.  
+They will be easy to remove, so you can have an empty but properly setup project.  
+... or you can use it as reference implementation.
