@@ -1,5 +1,23 @@
-<div i18n="@@examples/test-1">Test1</div>
-<div i18n="@@examples/test-2">Test1</div>
-<div i18n="@@examples/test-3">Test3</div>
+<div style="padding: 24px">
+  <h1>Hello and welcome, this is the Angular 14 "bootstrap" application.</h1>
 
-<button i18n="@@app/button/set-language" (click)="setLang('hu-HU')">Set language to: hu-HU</button>
+  <p>You should check the repo readme for further info.</p>
+
+  <p>
+    To have a clean (but setup) state, please remove the routes from <code>app-routing.module.ts</code>, delete all the
+    feature modules (they are lazy-loaded, don't worry about them) and you're ready to go with your own application.
+  </p>
+
+  <p>Below the <code>router-outlet</code> to show the features for:</p>
+
+  <ul>
+    <li>
+      <a routerLink="/demo/material-showcase">Material</a> (to adjust material palette, check
+      <code>app-theme.css</code>)
+    </li>
+  </ul>
+
+  <hr />
+
+  <router-outlet></router-outlet>
+</div>

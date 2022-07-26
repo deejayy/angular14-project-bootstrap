@@ -5,7 +5,13 @@ body div {
 }
 
 a {
-  color: $font-color;
+  color: map-get($foreground-light, 'base');
+}
+
+@media (prefers-color-scheme: dark) {
+  a {
+    color: map-get($foreground-dark, 'base');
+  }
 }
 
 * {
