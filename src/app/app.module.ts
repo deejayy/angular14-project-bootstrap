@@ -9,6 +9,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ConfigVars } from 'src/app/shared/model/config-vars.model';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RuntimeLocalizerModule } from '@deejayy/runtime-localizer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,16 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveConfigModule.forRoot(ConfigVars, { configPath: environment.config }),
+    RuntimeLocalizerModule.forRoot([
+      {
+        lang: 'en-US',
+        path: '/assets/messages/messages.en-US.json',
+      },
+      {
+        lang: 'hu-HU',
+        path: '/assets/messages/messages.hu-HU.json',
+      },
+    ]),
     StoreModule.forRoot(
       {},
       {

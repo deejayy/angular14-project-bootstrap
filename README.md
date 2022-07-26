@@ -13,14 +13,12 @@ LIst of features:
   - dark mode support based on palette
 - ngrx state manager with immer, dev tools
 - optimized build for rarely-changing files, vendor chunk
-- localizer with example dictionary
 - scss mixins: `mq` and `smart-scale`
 - module path aliases
 
 To be done:
 
 - api caller
-- localizer runtime autoload
 - feature flag
 - demo page
 
@@ -46,5 +44,9 @@ Config file: /assets/config-{dev,prod}.json
 
 *Protip*: if you want to hide your dev/staging/qa configs, generate a hash in the config's file name (security through obscurity), like this: `config-dev-ad7f82.json`. Since at build time it will only include the environment file which is required for that build env, your prod bundle won't contain the dev configs name, and also can't be guessed because of the hash.  
 Or, of course, you can adjust `fileReplacements` section in angular.json for similar effect.
+
+### Runtime Localizer
+
+Check: https://www.npmjs.com/package/@deejayy/runtime-localizer
 
 ### TBD
